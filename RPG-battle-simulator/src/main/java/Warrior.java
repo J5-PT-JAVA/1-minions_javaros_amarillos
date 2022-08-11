@@ -2,12 +2,26 @@ public class Warrior extends Character{
     public int stamina;
     public int strength;
 
+    // Add getters
+    public int getStamina() {
+        return stamina;
+    }
+    public int getStrength() {
+        return strength;
+    }
+    // Add setters
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
     public void HeavyAttack(Character opponent){
         this.stamina -= 5;
         opponent.hp -= this.strength;
     }
     public void WeakAttack(Character opponent){
-        // The damage of a weak attack is the half of the strength (truncate decimals). Every weak attack will recover his stamina by 1.
         opponent.hp -= this.strength/2;
         this.stamina += 1;
     }

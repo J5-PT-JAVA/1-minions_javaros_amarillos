@@ -2,6 +2,21 @@ public class Wizard extends Character{
     public int mana;
     public int intelligence;
 
+    // Add getters
+    public int getMana() {
+        return mana;
+    }
+    public int getIntelligence() {
+        return intelligence;
+    }
+    // Add setters
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
     public void Fireball(Character opponent){
         this.mana -= 5;
         opponent.hp -= this.intelligence;
